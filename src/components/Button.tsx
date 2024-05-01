@@ -1,9 +1,13 @@
 import { buttonStyle } from "./Button.css";
 
-export function Button() {
+type Props = {
+	children: React.ReactNode;
+};
+
+export function Button({ children }: Props) {
 	return (
 		<button type="button" className={buttonStyle}>
-			Click me
+			{children}
 		</button>
 	);
 }
