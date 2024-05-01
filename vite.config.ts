@@ -13,5 +13,14 @@ export default defineConfig({
 			name: "reactTs",
 			fileName: "react-ts",
 		},
+		rollupOptions: {
+			external: ["react", "react-dom"],
+			output: {
+				globals: {
+					react: "React",
+					"react-dom": "ReactDOM",
+				},
+			},
+		},
 	},
 });
